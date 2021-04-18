@@ -40,7 +40,7 @@ class ManagedType {
   ManagedType(this.type, this.kind, this.elements, this.enumerationMap);
 
   // ignore: prefer_constructors_over_static_methods
-  static ManagedType make<T>(ManagedPropertyType kind, ManagedType elements,
+  static ManagedType make<T>(ManagedPropertyType kind, ManagedType? elements,
       Map<String, dynamic> enumerationMap) {
     return ManagedType(T, kind, elements, enumerationMap);
   }
@@ -60,10 +60,10 @@ class ManagedType {
   final Type type;
 
   /// Whether this is an enum type.
-  bool get isEnumerated => enumerationMap != null;
+  bool get isEnumerated => enumerationMap.isNotEmpty;
 
   /// For enumerated types, this is a map of the name of the option to its Dart enum type.
-  final Map<String, dynamic>? enumerationMap;
+  final Map<String, dynamic> enumerationMap;
 
   /// Whether [dartValue] can be assigned to properties with this type.
   bool isAssignableWith(dynamic dartValue) {
@@ -90,8 +90,8 @@ class ManagedType {
         return dartValue is Document;
       case ManagedPropertyType.string:
         {
-          if (enumerationMap != null) {
-            return enumerationMap!.values.contains(dartValue);
+          if (enumerationMap.isNotEmpty) {
+            return enumerationMap.values.contains(dartValue);
           }
           return dartValue is String;
         }

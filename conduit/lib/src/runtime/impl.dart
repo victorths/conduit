@@ -78,6 +78,8 @@ class ChannelRuntimeImpl extends ChannelRuntime implements SourceCompiler {
 import 'dart:async';    
 import 'package:conduit/conduit.dart';
 import 'package:conduit/src/application/isolate_application_server.dart';
+import 'package:conduit_common/conduit_common.dart';
+
 import '$originalFileUri';
 
 final instance = ChannelRuntimeImpl();
@@ -100,7 +102,7 @@ class ChannelRuntimeImpl extends ChannelRuntime {
   IsolateEntryFunction get isolateEntryPoint => entryPoint;
   
   @override
-  Uri get libraryUri => null;
+  Uri get libraryUri => Uri();
 
   @override
   Type get channelType => $className;
@@ -190,7 +192,7 @@ class ControllerRuntimeImpl extends ControllerRuntime {
   bool get isMutable => ${isMutable};
 
   ResourceControllerRuntime get resourceController => _resourceController;
-  ResourceControllerRuntime _resourceController;
+  late ResourceControllerRuntime _resourceController;
 }
 
 ${(resourceController as ResourceControllerRuntimeImpl?)?.compile(ctx) ?? ""}

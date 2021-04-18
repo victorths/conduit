@@ -95,15 +95,15 @@ class ResourceControllerParameter {
   // ignore: prefer_constructors_over_static_methods
   static ResourceControllerParameter make<T>(
       {required String symbolName,
-      required String name,
+      required String? name,
       required BindingType location,
       required bool isRequired,
       required dynamic Function(dynamic input) decoder,
       required dynamic defaultValue,
-      required List<String> acceptFilter,
-      required List<String> ignoreFilter,
-      required List<String> requireFilter,
-      required List<String> rejectFilter}) {
+      required List<String>? acceptFilter,
+      required List<String>? ignoreFilter,
+      required List<String>? requireFilter,
+      required List<String>? rejectFilter}) {
     return ResourceControllerParameter(
         symbolName: symbolName,
         name: name,

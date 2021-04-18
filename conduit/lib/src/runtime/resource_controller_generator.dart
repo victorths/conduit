@@ -25,7 +25,7 @@ String getInvokerSource(BuildContext context,
     var defaultValue = sourcifyValue(p.defaultValue);
 
     buf.writeln(
-        "    ${p.symbolName}: args.namedArguments['${p.symbolName}'] as ${p.type} ?? $defaultValue,");
+        "    ${p.symbolName}: args.namedArguments['${p.symbolName}'] as ${p.type}? ?? $defaultValue,");
   });
 
   buf.writeln("  );");
@@ -41,7 +41,7 @@ String getApplyRequestPropertiesSource(
 
   runtime.ivarParameters!.forEach((f) {
     buf.writeln("(untypedController as $subclassName).${f.symbolName} "
-        "= args.instanceVariables['${f.symbolName}'] as ${f.type};");
+        "= args.instanceVariables['${f.symbolName}'] as ${f.type}?;");
   });
 
   return buf.toString();
