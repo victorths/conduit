@@ -16,7 +16,7 @@ dev_dependencies:
 dependency_overrides: 
   conduit_common: 
     path: ../common
-  conduit_common_test:
+  conduit_common_test: 
     path: ../common_test
   conduit: 
     path: ../conduit
