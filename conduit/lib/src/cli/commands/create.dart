@@ -68,6 +68,7 @@ class CLITemplateCreator extends CLICommand with CLIConduitGlobal {
         "conduit_test": _packageUri(conduitLocation, 'test_harness'),
         "conduit_codable": _packageUri(conduitLocation, 'codable'),
         "conduit_common": _packageUri(conduitLocation, 'common'),
+        "conduit_common_test": _packageUri(conduitLocation, 'common_test'),
         "conduit_config": _packageUri(conduitLocation, 'config'),
         "conduit_isolate_exec": _packageUri(conduitLocation, 'isolate_exec'),
         "conduit_open_api": _packageUri(conduitLocation, 'open_api'),
