@@ -1,3 +1,8 @@
+# 3.0.8
+uptick
+fix create
+uncomment pubrelease multi
+
 # 3.0.7
 uptick version for multi release
 
