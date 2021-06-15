@@ -1,3 +1,6 @@
+# 3.0.6
+fix templating
+
 # 3.0.5
 Stable Conduit Release
 
