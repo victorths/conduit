@@ -1,6 +1,5 @@
 name: test_package
+version: 3.0.5
 description: test dependency
-version: 1.0.0
-
-environment:
+environment: 
   sdk: '>=2.12.0-0 <3.0.0'
