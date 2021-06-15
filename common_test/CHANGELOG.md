@@ -1,3 +1,6 @@
+# 3.0.5
+Stable Conduit Release
+
 # 3.0.3
 
 Upgrade packages
