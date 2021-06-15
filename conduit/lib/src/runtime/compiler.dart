@@ -55,7 +55,6 @@ class ConduitCompiler extends Compiler {
     if (context.forTests) {
       final devPackages = [
         {'name': 'conduit_test', 'path': 'test_harness'},
-        {'name': 'conduit_common_test', 'path': 'common_test'},
         {'name': 'fs_test_agent', 'path': 'fs_test_agent'},
       ];
       final targetPubspecFile =

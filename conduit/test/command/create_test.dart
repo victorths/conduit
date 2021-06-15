@@ -147,6 +147,7 @@ void main() {
           final projectVersionConstraint = VersionConstraint.parse(
             contents["dependencies"]["conduit"] as String,
           );
+          print(projectVersionConstraint);
           expect(projectVersionConstraint.allows(conduitVersion), isTrue);
         },
       );
