@@ -7,5 +7,4 @@ runtime: ../runtime
 open_api: ../open_api
 common: ../common
 conduit: ../conduit
-common_test: ../common_test
 test_harness: ../test_harness
