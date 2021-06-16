@@ -1,3 +1,18 @@
+# 3.0.9
+uptck
+common test compiler
+
+# 3.0.8
+uptick
+fix create
+uncomment pubrelease multi
+
+# 3.0.7
+uptick version for multi release
+
+# 3.0.6
+fix templating
+
 # 3.0.5
 Stable Conduit Release
 
