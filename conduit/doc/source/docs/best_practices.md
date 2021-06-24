@@ -20,6 +20,14 @@ application_name/
 
 It is tempting to share your data model types between your server and client applications, but this falls apart for anything but the most simple of applications. There are enough behavioral differences between the four representations of your data model - in the database, on the server, on the wire \(JSON\), and on the client - that a single type will have a hard time encompassing. Instead, generate an OpenAPI specification with `conduit document` and use one of the many open-source tools for generating client data model types.
 
+## Split discrete components into separate packages
+
+It can often be useful to split discrete code pieces into separate packages with their own sub-repo.
+
+Non-trivial Flutter widgets are a good example. Having the code in a separate package facilitate allocating a single owner to the package. Packages with a single owner have much less management overhead and cleaner commit logs. It also stops developers treading on each others toes.
+
+Remember a component isn't just a flutter widget. It can be a collection of classes/functions that provide a specific service, this could be something like permission management or formating/parsing monetary amounts. Any collection of code that together delivers a singular 'concern' is a good candidate.
+
 ## Use Test Driven Development \(or something close to it\)
 
 In Conduit, testing is a first-class citizen. The `conduit_test` package has classes and methods for initializing and running an application for testing, making requests to that application, and verifying the responses. There is value to using tools like Postman or CURL to test proof of concept code, but the `conduit_test` package is geared specifically for replacing these tools while retaining automated tests as the project grows.
