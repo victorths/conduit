@@ -1,10 +1,10 @@
 # Deploying a Conduit Application on Heroku
 
-For other deployment options, see [Deploying Conduit Applications]().
+For other deployment options, see [Deploying Conduit Applications](deploy_heroku.md).
 
 ## Purpose
 
-To run a production Conduit application on Heroku. Make sure to also read [Testing Conduit Applications]().
+To run a production Conduit application on Heroku. Make sure to also read [Testing Conduit Applications](deploy_heroku.md).
 
 ## Prerequisites
 
@@ -12,7 +12,7 @@ To run a production Conduit application on Heroku. Make sure to also read [Testi
 2. [A Heroku account.](https://signup.heroku.com)
 3. [`git` has been installed.](https://git-scm.com/downloads)
 4. [`heroku` has been installed.](https://devcenter.heroku.com/articles/heroku-cli)
-5. [Conduit has been activated.]()
+5. [Conduit has been activated.](deploy_heroku.md)
 
 ## Overview
 

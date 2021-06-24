@@ -1,6 +1,6 @@
 # Deploying a Conduit Application using Docker
 
-For other deployment options, see [Deploying Conduit Applications]().
+For other deployment options, see [Deploying Conduit Applications](deploy_docker.md).
 
 ## Purpose
 

@@ -1,10 +1,10 @@
 # Deploying a Conduit Application on a Local Machine
 
-For other deployment options, see [Deploying Conduit Applications]().
+For other deployment options, see [Deploying Conduit Applications](deploy_local.md).
 
 ## Purpose
 
-To run a local development version of a Conduit application with persistent storage. This is useful when developing client applications with a Conduit application. Make sure to also read [Testing Conduit Applications]().
+To run a local development version of a Conduit application with persistent storage. This is useful when developing client applications with a Conduit application. Make sure to also read [Testing Conduit Applications](deploy_local.md).
 
 ## Prerequisites
 

@@ -14,7 +14,9 @@ application_name/
   shared/
 ```
 
-!!! note "Project Definition" A _project_ is a directory that contain a `pubspec.yaml` file and `lib` directory.
+{% hint style="info" %}
+ "Project Definition" A _project_ is a directory that contain a `pubspec.yaml`file and `lib` directory.
+{% endhint %}
 
 It is tempting to share your data model types between your server and client applications, but this falls apart for anything but the most simple of applications. There are enough behavioral differences between the four representations of your data model - in the database, on the server, on the wire \(JSON\), and on the client - that a single type will have a hard time encompassing. Instead, generate an OpenAPI specification with `conduit document` and use one of the many open-source tools for generating client data model types.
 
