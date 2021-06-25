@@ -35,6 +35,7 @@
   * [JSON Document Storage](db/json_columns.md)
   * [Modeling Data](db/modeling_data.md)
   * [ManagedObject Serialization and Deserialization](db/serialization.md)
+  * [MySql](db/mysql.md)
 * [Authentication](auth/README.md)
   * [Creating AuthServers to Authenticate and Authorize](auth/server.md)
   * [Manage OAuth 2.0 Clients](auth/cli.md)
