@@ -48,7 +48,7 @@
   * [Testing in Conduit](testing/tests.md)
   * [Testing Applications That Use ORM and OAuth 2.0](testing/mixins.md)
   * [Mocking External Services](testing/mock.md)
-  * [Using the IntelliJ IDE Debugger](testing/debugger.md)
+  * [Debugging Conduit Applications](testing/debugger.md)
 * [Conduit: A Tour](tour.md)
 * [Application](application/README.md)
   * [Configuring an Application and its Environment](application/configure.md)
