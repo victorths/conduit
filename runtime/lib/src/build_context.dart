@@ -1,8 +1,8 @@
 import 'dart:io';
 import 'dart:mirrors';
+import 'package:path/path.dart';
 
 import 'package:analyzer/dart/ast/ast.dart';
-import 'package:dcli/dcli.dart' hide PubSpec;
 import 'package:pubspec/pubspec.dart';
 import 'package:conduit_runtime/src/analyzer.dart';
 import 'package:conduit_runtime/src/context.dart';
