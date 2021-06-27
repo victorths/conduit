@@ -1,3 +1,16 @@
+# 3.0.11
+update version to 3.0.11
+remove dcli from conduit and dependencies
+remove dcli from runtime
+change version
+Merge branch 'stable'
+Merge branch 'master' of github.com:conduit-dart/conduit
+update some imports
+GitBook: [master] 2 pages modified
+GitBook: [master] 5 pages and 6 assets modified
+GitBook: [master] 73 pages modified
+GitBook: [master] 17 pages and 20 assets modified
+
 # 3.0.10
 try catch conduit package not exist (#51)
 
