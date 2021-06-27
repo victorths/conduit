@@ -1,7 +1,8 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:conduit_isolate_exec/conduit_isolate_exec.dart';
-import 'package:dcli/dcli.dart' hide Executable;
+import 'package:path/path.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -178,6 +179,7 @@ class AdditionalContentsInstantiator extends Executable {
   }
 }
 
-void _getDependencies(String projectDir) {
-  DartSdk().runPubGet(projectDir);
+Future<ProcessResult> _getDependencies(String projectDir) {
+  final cmd = Platform.isWindows ? "pub.bat" : "pub";
+  return Process.run(cmd, ["get"], workingDirectory: projectDir);
 }

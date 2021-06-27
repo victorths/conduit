@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:conduit_open_api/v3.dart';
-import 'package:dcli/dcli.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -95,8 +94,8 @@ void main() {
     APIDocument? doc;
     Map<String, dynamic>? original;
 
-    setUpAll(() {
-      final String config = fetchStripExample();
+    setUpAll(() async {
+      final String config = await fetchStripExample();
 
       final file = File(config);
       final contents = file.readAsStringSync();
@@ -356,21 +355,23 @@ void main() {
   });
 }
 
-String fetchStripExample() {
+Future<String> fetchStripExample() async {
   // Spec file is too large for pub, and no other way to remove from pub publish
   // than putting in .gitignore. Therefore, this file must be downloaded locally
   // to this path, from this path: https://raw.githubusercontent.com/stripe/openapi/master/openapi/spec3.json
 
   const config = "test/specs/stripe.json";
-  if (!exists(config)) {
-    if (!exists(dirname(config))) {
-      createDir(dirname(config), recursive: true);
+  final configFile = File(config);
+  if (!configFile.existsSync()) {
+    if (!configFile.parent.existsSync()) {
+      Directory(configFile.parent.path).createSync(recursive: true);
     }
 
-    fetch(
-        url:
-            'https://raw.githubusercontent.com/stripe/openapi/master/openapi/spec3.json',
-        saveToPath: config);
+    const url =
+        'https://raw.githubusercontent.com/stripe/openapi/master/openapi/spec3.json';
+    final request = await HttpClient().getUrl(Uri.parse(url));
+    final response = await request.close();
+    response.pipe(File(config).openWrite());
   }
   return config;
 }

@@ -4,10 +4,9 @@ import 'dart:io';
 import 'package:conduit/src/cli/runner.dart';
 import 'package:conduit/src/cli/running_process.dart';
 import 'package:conduit_common_test/conduit_common_test.dart';
-import 'package:dcli/dcli.dart';
-
 import 'package:fs_test_agent/dart_project_agent.dart';
 import 'package:fs_test_agent/working_directory_agent.dart';
+import 'package:path/path.dart';
 
 class CLIClient {
   CLIClient(this.agent);
@@ -78,37 +77,25 @@ class CLIClient {
       {String name = "application_test",
       String? template,
       bool offline = true}) async {
-    final project = DartProject.fromPath('.');
+    final project = normalize(absolute(join('.')));
     if (template == null) {
       final client = CLIClient(DartProjectAgent(name, dependencies: {
-        "conduit": {"path": DartProject.fromPath('.').pathToProjectRoot}
+        "conduit": {"path": project}
       }, devDependencies: {
         "test": "^1.6.7"
       }, dependencyOverrides: {
-        'conduit_runtime': {
-          'path': '${join(project.pathToProjectRoot, '..', 'runtime')}'
-        },
+        'conduit_runtime': {'path': '${join(project, '..', 'runtime')}'},
         'conduit_isolate_exec': {
-          'path': '${join(project.pathToProjectRoot, '..', 'isolate_exec')}'
+          'path': '${join(project, '..', 'isolate_exec')}'
         },
         'conduit_password_hash': {
-          'path': '${join(project.pathToProjectRoot, '..', 'password_hash')}'
+          'path': '${join(project, '..', 'password_hash')}'
         },
-        'conduit_open_api': {
-          'path': '${join(project.pathToProjectRoot, '..', 'open_api')}'
-        },
-        'conduit_codable': {
-          'path': '${join(project.pathToProjectRoot, '..', 'codable')}'
-        },
-        'conduit_config': {
-          'path': '${join(project.pathToProjectRoot, '..', 'config')}'
-        },
-        'conduit_common': {
-          'path': '${join(project.pathToProjectRoot, '..', 'common')}'
-        },
-        'fs_test_agent': {
-          'path': '${join(project.pathToProjectRoot, '..', 'fs_test_agent')}'
-        }
+        'conduit_open_api': {'path': '${join(project, '..', 'open_api')}'},
+        'conduit_codable': {'path': '${join(project, '..', 'codable')}'},
+        'conduit_config': {'path': '${join(project, '..', 'config')}'},
+        'conduit_common': {'path': '${join(project, '..', 'common')}'},
+        'fs_test_agent': {'path': '${join(project, '..', 'fs_test_agent')}'}
       }));
 
       client.projectAgent.addLibraryFile("channel", """

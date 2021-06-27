@@ -1,10 +1,8 @@
-@Timeout(Duration(seconds: 45))
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
 import 'package:conduit_runtime/runtime.dart';
-import 'package:dcli/dcli.dart';
 import 'package:test/test.dart';
 
 /*
@@ -14,25 +12,27 @@ need to test for local (relative), in pub cache (absolute)
 
 void main() {
   setUpAll(() async {
+    var cmd;
+    if (Platform.isWindows) {
+      cmd = (await Process.run("where", ["pub.bat"])).stdout;
+    } else {
+      cmd = (await Process.run("which", ["pub"])).stdout;
+    }
+
     final testPackagesUri =
         Directory.current.uri.resolve("../").resolve("runtime_test_packages/");
-    DartSdk().runPub(
-      args: ["get", "--offline"],
-      workingDirectory: testPackagesUri
-          .resolve("application/")
-          .toFilePath(windows: Platform.isWindows),
-    );
-    DartSdk().runPub(
-      args: ["get", "--offline"],
-      workingDirectory: testPackagesUri
-          .resolve("dependency/")
-          .toFilePath(windows: Platform.isWindows),
-    );
+    await Process.run(cmd, ["get", "--offline"],
+        workingDirectory: testPackagesUri
+            .resolve("application/")
+            .toFilePath(windows: Platform.isWindows),
+        runInShell: true);
+    await Process.run(cmd, ["get", "--offline"],
+        workingDirectory: testPackagesUri
+            .resolve("dependency/")
+            .toFilePath(windows: Platform.isWindows),
+        runInShell: true);
 
-    final appDir = Directory.current.uri
-        .resolve("../")
-        .resolve("runtime_test_packages/")
-        .resolve("application/");
+    final appDir = testPackagesUri.resolve("application/");
     final appLib = appDir.resolve("lib/").resolve("application.dart");
     final tmp = Directory.current.uri.resolve("tmp/");
     final ctx = BuildContext(
@@ -46,10 +46,8 @@ void main() {
   });
 
   tearDownAll(() {
-    final dir = Directory.fromUri(Directory.current.uri.resolve("tmp/"));
-    if (dir.existsSync()) {
-      dir.deleteSync(recursive: true);
-    }
+    Directory.fromUri(Directory.current.uri.resolve("tmp/"))
+        .deleteSync(recursive: true);
   });
 
   test("Non-compiled version returns mirror runtimes", () async {

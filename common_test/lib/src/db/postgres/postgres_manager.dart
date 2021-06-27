@@ -1,6 +1,7 @@
+// TODO: Move to CI or devtools
+
 import 'dart:io';
 
-import 'package:conduit_common/conduit_common.dart';
 import 'package:dcli/dcli.dart';
 
 import '../../../conduit_common_test.dart';
