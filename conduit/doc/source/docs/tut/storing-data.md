@@ -58,7 +58,7 @@ INSERT INTO _Hero (name) VALUES ('Hero Name');
 
 Re-run your application. In the browser application, click on `Heroes` near the top of the page. Then, enter a name into the `Hero name:` field and click `Add`. The new hero will appear. You can re-run the application and that hero will still be available, because it has been stored in the database on your machine.
 
-![Insert Hero](../.gitbook/assets/run3%20%281%29.png)
+![Insert Hero](../.gitbook/assets/run3%20%281%29%20%282%29.png)
 
 Assigning values one-by-one from a request body to a query is cumbersome. You can also auto-magically ingest a request body into a managed object and assign it to the `values` of a query:
 

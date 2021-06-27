@@ -1,4 +1,4 @@
-# Using the IntelliJ IDE Debugger
+# Debugging Conduit Applications
 
 The debugger may be used when running tests or developing client applications locally.
 

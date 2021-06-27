@@ -8,7 +8,7 @@ The building blocks of a Conduit application are [Controllers](../http/controlle
 
 For example, consider an `Authorizer` controller that verifies the request's authorization credentials are correct, and a `SecretController` that sends a response with secret information. By composing these two controllers together, we have a channel that verifies credentials before sending a secret. The benefit of controllers and channels is that controllers can be reused in multiple channels; the `Authorizer` can protect other types of controllers without any change to its logic.
 
-![Simple Controller Diagram](../.gitbook/assets/simple_controller_diagram.png)
+![Simple Controller Diagram](../.gitbook/assets/simple_controller_diagram%20%281%29%20%281%29.png)
 
 The last controller in a channel must always respond to a request. These types of controllers are called _endpoint controllers_ and implement the business logic for your application's endpoints. For example, an endpoint controller might fetch a list of books from a database and send them in a response.
 
@@ -65,7 +65,7 @@ lib/
   application_name.dart
 ```
 
-The name of any Dart application is defined by the `name` key in `pubspec.yaml`. In order for `conduit serve` to run your application, there must be a `.dart` file in `lib/` with that same name. This is your application library file and it must declare a `ApplicationChannel` subclass or import a file that does. This is the bare minimum requirement to run a Conduit application. \(See [Deploying]() for more details on running applications.\)
+The name of any Dart application is defined by the `name` key in `pubspec.yaml`. In order for `conduit serve` to run your application, there must be a `.dart` file in `lib/` with that same name. This is your application library file and it must declare a `ApplicationChannel` subclass or import a file that does. This is the bare minimum requirement to run a Conduit application. \(See [Deploying](structure.md) for more details on running applications.\)
 
 For organizing applications of reasonable size, we recommend the following structure:
 

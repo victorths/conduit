@@ -148,7 +148,7 @@ This will start your application running locally. Reload the browser page `http:
 
 #### Screenshot of Heroes Application
 
-![Conduit Heroes First Run](../.gitbook/assets/run1.png)
+![Conduit Heroes First Run](../.gitbook/assets/run1%20%281%29%20%281%29.png)
 
 You can also see the actual response of your request by entering the following into your shell:
 
