@@ -1,3 +1,6 @@
+# 3.0.10
+try catch conduit package not exist (#51)
+
 # 3.0.9
 uptck
 common test compiler

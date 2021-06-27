@@ -1,3 +1,6 @@
+# 3.0.10
+fix for non-path create cli
+
 # 3.0.9
 
 # 3.0.8
