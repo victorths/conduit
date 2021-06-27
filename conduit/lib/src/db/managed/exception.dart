@@ -1,4 +1,4 @@
-import 'package:conduit/conduit.dart';
+import 'package:conduit/src/http/serializable.dart';
 
 /// An exception thrown when an ORM property validator is violated.
 ///

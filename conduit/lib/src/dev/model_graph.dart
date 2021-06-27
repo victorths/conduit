@@ -1,5 +1,10 @@
 import 'dart:async';
-import 'package:conduit/conduit.dart';
+
+import 'package:conduit/src/db/managed/attributes.dart';
+import 'package:conduit/src/db/managed/context.dart';
+import 'package:conduit/src/db/managed/object.dart';
+import 'package:conduit/src/db/managed/set.dart';
+import 'package:conduit/src/db/query/query.dart';
 
 class RootObject extends ManagedObject<_RootObject> implements _RootObject {
   RootObject();

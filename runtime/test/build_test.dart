@@ -1,3 +1,4 @@
+@Timeout(Duration(seconds: 45))
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
@@ -45,8 +46,10 @@ void main() {
   });
 
   tearDownAll(() {
-    Directory.fromUri(Directory.current.uri.resolve("tmp/"))
-        .deleteSync(recursive: true);
+    final dir = Directory.fromUri(Directory.current.uri.resolve("tmp/"));
+    if (dir.existsSync()) {
+      dir.deleteSync(recursive: true);
+    }
   });
 
   test("Non-compiled version returns mirror runtimes", () async {

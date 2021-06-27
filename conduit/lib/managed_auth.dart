@@ -25,7 +25,16 @@ library conduit.managed_auth;
 
 import 'dart:async';
 
-import 'package:conduit/conduit.dart';
+import 'package:conduit/src/db/managed/attributes.dart';
+import 'package:conduit/src/db/managed/context.dart';
+import 'package:conduit/src/db/managed/object.dart';
+
+import 'src/auth/authorization_server.dart';
+import 'src/auth/exceptions.dart';
+import 'src/auth/objects.dart';
+import 'src/auth/protocols.dart';
+import 'src/db/managed/set.dart';
+import 'src/db/query/query.dart';
 
 /// Represent an OAuth 2.0 authorization token and authorization code.
 ///
