@@ -1,6 +1,5 @@
-// TODO: Move to CI or devtools
+import 'dart:io' show Platform;
 
-import 'package:dcli/dcli.dart';
 import 'package:settings_yaml/settings_yaml.dart';
 
 class DbSettings {
@@ -36,6 +35,7 @@ class DbSettings {
   late String dbName;
   late String host;
   late int port;
+  Map<String, String> env = Platform.environment;
 
   /// If true then we are using a docker postgres container
   /// If false we are using a user supplied postgres daemon.

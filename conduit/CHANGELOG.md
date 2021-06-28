@@ -1,3 +1,6 @@
+# 3.0.11
+remove dcli dependency for conduit and dependencies
+
 # 3.0.10
 fix for non-path create cli
 

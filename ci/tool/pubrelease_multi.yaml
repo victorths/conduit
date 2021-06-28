@@ -4,7 +4,7 @@
 # isolate_exec: ../isolate_exec
 # runtime: ../runtime
 # open_api: ../open_api
-common: ../common
-config: ../config
+# common: ../common
+# config: ../config
 conduit: ../conduit
 test_harness: ../test_harness

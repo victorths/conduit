@@ -3,8 +3,8 @@
 import 'package:conduit/conduit.dart';
 import 'package:conduit/managed_auth.dart';
 import 'package:conduit_common_test/conduit_common_test.dart';
-import 'package:dcli/dcli.dart';
 import 'package:fs_test_agent/dart_project_agent.dart';
+import 'package:path/path.dart';
 import 'package:test/test.dart';
 
 import '../not_tests/cli_helpers.dart';
@@ -17,35 +17,23 @@ void main() {
   late CLIClient cli;
 
   setUpAll(() async {
-    final project = DartProject.fromPath('.');
+    final project = normalize(absolute(join('.')));
 
     cli = CLIClient(DartProjectAgent("application_test", dependencies: {
-      "conduit": {"path": DartProject.fromPath('.').pathToProjectRoot},
+      "conduit": {"path": project},
     }, dependencyOverrides: {
-      'conduit_runtime': {
-        'path': '${join(project.pathToProjectRoot, '..', 'runtime')}'
-      },
+      'conduit_runtime': {'path': '${join(project, '..', 'runtime')}'},
       'conduit_isolate_exec': {
-        'path': '${join(project.pathToProjectRoot, '..', 'isolate_exec')}'
+        'path': '${join(project, '..', 'isolate_exec')}'
       },
       'conduit_password_hash': {
-        'path': '${join(project.pathToProjectRoot, '..', 'password_hash')}'
+        'path': '${join(project, '..', 'password_hash')}'
       },
-      'conduit_open_api': {
-        'path': '${join(project.pathToProjectRoot, '..', 'open_api')}'
-      },
-      'conduit_codable': {
-        'path': '${join(project.pathToProjectRoot, '..', 'codable')}'
-      },
-      'conduit_config': {
-        'path': '${join(project.pathToProjectRoot, '..', 'config')}'
-      },
-      'conduit_common': {
-        'path': '${join(project.pathToProjectRoot, '..', 'common')}'
-      },
-      'fs_test_agent': {
-        'path': '${join(project.pathToProjectRoot, '..', 'fs_test_agent')}'
-      }
+      'conduit_open_api': {'path': '${join(project, '..', 'open_api')}'},
+      'conduit_codable': {'path': '${join(project, '..', 'codable')}'},
+      'conduit_config': {'path': '${join(project, '..', 'config')}'},
+      'conduit_common': {'path': '${join(project, '..', 'common')}'},
+      'fs_test_agent': {'path': '${join(project, '..', 'fs_test_agent')}'}
     }))
       ..defaultArgs = ["--connect", PostgresTestConfig().connectionUrl];
     await cli.agent.getDependencies();

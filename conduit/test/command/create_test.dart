@@ -2,10 +2,10 @@
 @Tags(["cli"])
 import 'dart:io';
 
-import 'package:dcli/dcli.dart';
 import 'package:fs_test_agent/dart_project_agent.dart';
 import 'package:fs_test_agent/working_directory_agent.dart';
 import 'package:path/path.dart' as path_lib;
+import 'package:path/path.dart';
 import 'package:pub_semver/pub_semver.dart';
 import 'package:test/test.dart';
 import 'package:yaml/yaml.dart';
@@ -166,22 +166,25 @@ void main() {
           isZero,
         );
 
-        var testPath = join(cli.agent.workingDirectory.path, 'test_project');
-        DartSdk().runPubGet(testPath);
-
-        var progress = DartSdk().runPub(
-            args: ["run", "test", "-j", "1"],
-            workingDirectory: testPath,
-            progress: Progress.capture(),
-            nothrow: true);
-
-        /// If the test failed dump the output so we can diagnose the problem
-        if (progress.exitCode != 0) {
-          progress.lines.forEach(print);
+        String cmd;
+        if (Platform.isWindows) {
+          cmd = (await Process.run("where", ["pub.bat"])).stdout as String;
+        } else {
+          cmd = (await Process.run("which", ["pub"])).stdout as String;
         }
+        var res = Process.runSync(
+          cmd,
+          ["run", "test", "-j", "1"],
+          runInShell: true,
+          workingDirectory: cli.agent.workingDirectory.uri
+              .resolve("test_project")
+              .toFilePath(windows: Platform.isWindows),
+        );
 
-        expect(progress.lines.join('\n'), contains("All tests passed!"));
-        expect(progress.exitCode, 0);
+        print(res.stderr);
+
+        expect(res.stdout, contains("All tests passed"));
+        expect(res.exitCode, 0);
       });
     }
   });

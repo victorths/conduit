@@ -1,3 +1,4 @@
+@Timeout(Duration(seconds: 45))
 // ignore: unnecessary_const
 @Tags(["cli"])
 import 'dart:async';
