@@ -1,4 +1,4 @@
-# 2. Reading from a Database
+# Reading from a Database
 
 We will continue to build on the last chapter's project, `heroes`, by storing our heroes in a database. This will let us to edit our heroes and keep the changes when we restart the application.
 
@@ -169,7 +169,7 @@ SELECT id, name FROM _question WHERE id = 1;
 
 The `where` method uses the _property selector_ syntax. This syntax is a closure that takes an argument of the type being queried, and must return a property of that object. This creates an expression object that targets the selected property. By invoking methods like `equalTo` on this expression object, a boolean expression is added to the query.
 
-!!! tip "Property Selectors" Many query configuration methods use the property selector syntax. Setting up a keyboard shortcut \(called a Live Template in IntelliJ\) to enter the syntax is beneficial. A downloadable settings configuration for IntelliJ exists [here](../intellij.md) that includes this shortcut.
+!!! tip "Property Selectors" Many query configuration methods use the property selector syntax. Setting up a keyboard shortcut \(called a Live Template in IntelliJ\) to enter the syntax is beneficial. A downloadable settings configuration for IntelliJ exists [here]() that includes this shortcut.
 
 The `fetchOne()` execution method will fetch a single object that fulfills all of the expressions applied to the query. If no database row meets the criteria, `null` is returned. Our controller returns a 404 Not Found response in that scenario.
 

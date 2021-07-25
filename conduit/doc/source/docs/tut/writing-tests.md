@@ -1,4 +1,4 @@
-# 4. Configuration and Writing Tests
+# Configuration and Writing Tests
 
 We will continue to build on the last chapter's project, `heroes`, by writing automated tests for it. We will also set up configurable environments for our application.
 

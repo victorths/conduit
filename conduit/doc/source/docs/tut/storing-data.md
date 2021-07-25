@@ -1,4 +1,4 @@
-# 3. Storing Data in a Database
+# Storing Data in a Database
 
 In the previous exercise, we loaded some heroes into the database our application reads from. Now, we will allow our application to store, delete and modify heroes in the database. Before we embark on this part of the journey, it's important that we understand how an HTTP API is intended to work.
 
