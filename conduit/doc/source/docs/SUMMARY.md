@@ -9,7 +9,7 @@
   * [Reading from a Database](tut/executing-queries.md)
   * [Storing Data in a Database](tut/storing-data.md)
   * [Configuration and Writing Tests](tut/writing-tests.md)
-  * [Adding Authentication and Authorization with OAuth 2.0](tut/oauth2.md)
+  * [Authentication and Authorization with OAuth 2.0](tut/oauth2.md)
   * [Deploying a Conduit Application](tut/deploying-and-other-fun-things.md)
 * [Deploying Conduit](deploy/README.md)
   * [Deploy on a Local Machine](deploy/deploy_local.md)

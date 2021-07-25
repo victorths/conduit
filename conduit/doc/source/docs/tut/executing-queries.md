@@ -291,5 +291,3 @@ Notice that `name` is an _optional parameter_ \(it is surrounded by curly bracke
 
 Binding query and header parameters in a operation method is a good way to make your code more intentional and avoid boilerplate parsing code. Conduit is able to generate better documentation when using bindings.
 
-## [Next: Storing Data](storing-data.md)
-

@@ -286,5 +286,3 @@ test("POST /heroes returns 200 OK", () async {
 
 In this test, we request two 'Fred' heroes be created, and the second request fails with a 409 because `name` is a unique property of a hero. Notice that the first request didn't fail, even though we had created a 'Fred' hero in the previous test - that's because we reset the database for each test in our harness.
 
-## [Next Chapter: Authentication and Authorization](oauth2.md)
-

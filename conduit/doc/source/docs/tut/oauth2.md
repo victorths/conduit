@@ -1,4 +1,4 @@
-# Adding Authentication and Authorization with OAuth 2.0
+# Authentication and Authorization with OAuth 2.0
 
 Our `heroes` application lets anyone create or view the same set of heroes. We will continue to build on the last chapter's project, `heroes`, requiring a user to log in before viewing or creating heroes.
 

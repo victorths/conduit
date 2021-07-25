@@ -316,5 +316,3 @@ An instance of your application channel is created for each isolate. Each HTTP r
 
 If you are storing any data in your application, you'll find out really quickly. Why? A request that changes data will only change that data in one of your application's isolates. When you make a request to get that data again, its unlikely that you'll see the changes - another isolate with different data will probably handle that request.
 
-## [Next Chapter: Reading from a Database](executing-queries.md)
-
