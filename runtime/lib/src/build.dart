@@ -88,6 +88,25 @@ class Build {
       if (devDeps != null) {
         pubspecMap['dev_dependencies'] = devDeps;
       }
+
+      overrides['conduit'] = {
+        'path': appDst.toFilePath(windows: Platform.isWindows)
+      };
+      // overrides['conduit_password_hash'] = {'path': '../password_hash'};
+      // overrides['conduit_open_api'] = {'path': '../open_api'};
+      // overrides['conduit_codable'] = {'path': '../codable'};
+      // overrides['conduit_config'] = {
+      //   'path': appDst
+      //       .resolve('../conduit_config')
+      //       .toFilePath(windows: Platform.isWindows)
+      // };
+      // overrides['conduit_common'] = {'path': '../common'};
+      // overrides['conduit_isolate_exec'] = {'path': '../isolate_exec'};
+      overrides['conduit_runtime'] = {
+        'path': appDst
+            .resolve('../conduit_runtime')
+            .toFilePath(windows: Platform.isWindows)
+      };
     }
 
     File.fromUri(context.buildDirectoryUri.resolve("pubspec.yaml"))
@@ -113,9 +132,10 @@ class Build {
   }
 
   Future getDependencies() async {
-    final cmd = Platform.isWindows ? "pub.bat" : "pub";
+    const String cmd = "dart";
 
-    final res = await Process.run(cmd, ["get", "--offline", "--no-precompile"],
+    final res = await Process.run(
+        cmd, ["pub", "get", "--offline", "--no-precompile"],
         workingDirectory:
             context.buildDirectoryUri.toFilePath(windows: Platform.isWindows),
         runInShell: true);
@@ -129,8 +149,10 @@ class Build {
 
   Future compile(Uri srcUri, Uri dstUri) async {
     final res = await Process.run(
-        "dart2native",
+        "dart",
         [
+          "compilie",
+          "exe",
           "-v",
           srcUri.toFilePath(windows: Platform.isWindows),
           "-o",
