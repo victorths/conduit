@@ -5,6 +5,6 @@
 # runtime: ../runtime
 # open_api: ../open_api
 # common: ../common
-config: ../config
+# config: ../config
 conduit: ../conduit
 test_harness: ../test_harness
