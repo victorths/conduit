@@ -28,7 +28,7 @@ abstract class QueryReduceOperation<T extends ManagedObject> {
   ///         var query = Query<User>();
   ///         var totalUsers = await query.reduce.count();
   ///
-  Future<int?> count();
+  Future<int> count();
 
   /// Finds the maximum of some [ManagedObject] property.
   ///

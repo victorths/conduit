@@ -31,8 +31,6 @@ class PostgresQueryBuilder extends TableBuilder {
   Iterable<ColumnValueBuilder> get columnValueBuilders =>
       columnValueBuildersByKey.values;
 
-  bool get containsJoins => returning!.reversed.any((p) => p is TableBuilder);
-
   String? get sqlWhereClause {
     if (predicate?.format == null) {
       return null;
@@ -56,10 +54,10 @@ class PostgresQueryBuilder extends TableBuilder {
   }
 
   ColumnValueBuilder? _createColumnValueBuilder(String? key, dynamic value) {
-    var property = entity!.properties[key];
+    var property = entity.properties[key];
     if (property == null) {
       throw ArgumentError("Invalid query. Column '$key' does "
-          "not exist for table '${entity!.tableName}'");
+          "not exist for table '${entity.tableName}'");
     }
 
     if (property is ManagedRelationshipDescription) {
@@ -70,12 +68,12 @@ class PostgresQueryBuilder extends TableBuilder {
       if (value != null) {
         if (value is ManagedObject || value is Map) {
           return ColumnValueBuilder(
-              this, property, value[property.destinationEntity!.primaryKey]);
+              this, property, value[property.destinationEntity.primaryKey]);
         }
 
         throw ArgumentError("Invalid query. Column '$key' in "
-            "'${entity!.tableName}' does not exist. '$key' recognized as ORM relationship. "
-            "Provided value must be 'Map' or ${property.destinationEntity!.name}.");
+            "'${entity.tableName}' does not exist. '$key' recognized as ORM relationship. "
+            "Provided value must be 'Map' or ${property.destinationEntity.name}.");
       }
     }
 
@@ -129,7 +127,7 @@ class PostgresQueryBuilder extends TableBuilder {
   String get sqlOrderBy {
     var allSorts = List<ColumnSortBuilder>.from(columnSortBuilders);
 
-    var nestedSorts = returning!
+    var nestedSorts = returning
         .whereType<TableBuilder>()
         .expand((m) => m.columnSortBuilders);
     allSorts.addAll(nestedSorts);
