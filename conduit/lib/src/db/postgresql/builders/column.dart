@@ -33,8 +33,7 @@ class ColumnBuilder extends Returnable {
     }
 
     return List.from(keys.map((key) {
-      return ColumnBuilder(
-          table, propertyForName(entity, key.path.first!.name),
+      return ColumnBuilder(table, propertyForName(entity, key.path.first!.name),
           documentKeyPath: key.dynamicElements);
     }));
   }

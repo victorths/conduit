@@ -12,7 +12,8 @@ late List<Employee> employees = [];
 
 void main() {
   setUpAll(() async {
-      ctx = await PostgresTestConfig().contextWithModels([Company, Employee, Record, Report]);
+    ctx = await PostgresTestConfig()
+        .contextWithModels([Company, Employee, Record, Report]);
     await populate();
 
     /* Note that objects are sorted by id, and therefore all values are in sorted order */

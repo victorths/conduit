@@ -60,8 +60,8 @@ abstract class QueryMixin<InstanceType extends ManagedObject>
       return;
     }
 
-    _valueObject = entity
-        .instanceOf(backing: ManagedBuilderBacking.from(entity, obj.backing));
+    _valueObject = entity.instanceOf(
+        backing: ManagedBuilderBacking.from(entity, obj.backing));
   }
 
   @override

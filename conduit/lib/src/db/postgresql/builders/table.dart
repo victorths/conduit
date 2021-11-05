@@ -82,7 +82,6 @@ class TableBuilder implements Returnable {
   bool get isSetJoin =>
       joinedBy?.relationshipType == ManagedRelationshipType.hasMany;
 
-
   ManagedRelationshipDescription? get foreignKeyProperty =>
       joinedBy!.relationshipType == ManagedRelationshipType.belongsTo
           ? joinedBy
@@ -188,8 +187,7 @@ class TableBuilder implements Returnable {
     TableBuilder joinedTable = _findJoinedTable(expression.keyPath);
     final lastElement = expression.keyPath.path.last;
     if (lastElement is ManagedRelationshipDescription) {
-      final inversePrimaryKey =
-          lastElement.inverse!.entity.primaryKeyAttribute;
+      final inversePrimaryKey = lastElement.inverse!.entity.primaryKeyAttribute;
       final expr = ColumnExpressionBuilder(
           joinedTable, inversePrimaryKey, expression.expression,
           prefix: tableAlias);

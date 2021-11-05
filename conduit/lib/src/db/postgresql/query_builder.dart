@@ -127,9 +127,8 @@ class PostgresQueryBuilder extends TableBuilder {
   String get sqlOrderBy {
     var allSorts = List<ColumnSortBuilder>.from(columnSortBuilders);
 
-    var nestedSorts = returning
-        .whereType<TableBuilder>()
-        .expand((m) => m.columnSortBuilders);
+    var nestedSorts =
+        returning.whereType<TableBuilder>().expand((m) => m.columnSortBuilders);
     allSorts.addAll(nestedSorts);
 
     if (allSorts.isEmpty) {
