@@ -1,3 +1,17 @@
+# 3.1.0
+- "uptick version"
+- "Add posibility to use joins in reduce queries (#68)"
+- "downgrade ubuntu version for workflow"
+- "manually start test"
+- "forgot to clean up runtime build.dart"
+- "Pub snap fix (#62)"
+- "GitBook: [master] 8 pages modified"
+- "GitBook: [master] 63 pages and 11 assets modified"
+- "revert pub release multi"
+- "Merge branch 'master' of github.com:conduit-dart/conduit"
+- "remove heroku"
+- "Update CHANGELOG.md"
+
 # 3.0.11
 update version to 3.0.11
 remove dcli from conduit and dependencies
