@@ -1,0 +1,22 @@
+name: Test Suite
+
+on:
+  release:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image:  google/dart:latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Prepare pub credentials
+      run: echo '${{ secrets.PUB_CREDENTIALS }}' > "$XDG_CONFIG_HOME/dart/pub-credentials.json"
+    - name: Install melos
+      run: dart pub global activate melos
+    - name: Strip overrides
+      run: melos run strip-overrides
+    - name: Dry run
+      run: melos publish --dry-run
+    - name: Publish package
+      run: melos publish --no-dry-run
