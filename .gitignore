@@ -28,5 +28,6 @@ conduit/tool/.settings.yaml
 **/*.dart.vm.json
 stackoverflow
 **/.failed_tracker
+migration_tmp
 
 *.reflectable.dart
