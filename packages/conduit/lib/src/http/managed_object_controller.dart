@@ -245,7 +245,6 @@ class ManagedObjectController<InstanceType extends ManagedObject>
   @Operation.get()
   Future<Response> getObjects(
       {
-
       /// Limits the number of objects returned.
       @Bind.query("count") int count = 0,
 

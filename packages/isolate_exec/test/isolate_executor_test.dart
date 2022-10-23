@@ -198,6 +198,7 @@ class AdditionalContentsInstantiator extends Executable {
   @override
   Future<dynamic> execute() async {
     final obj = instanceOf("AdditionalContents");
+    // ignore: avoid_dynamic_calls
     return obj.id;
   }
 }

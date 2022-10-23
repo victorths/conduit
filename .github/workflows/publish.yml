@@ -29,12 +29,14 @@ jobs:
       run: dart pub global activate melos
     - name: Strip overrides
       run: melos run strip-overrides
+    - name: Format
+      run: dart fix --apply && dart format --fix .
     - name: Uptick versions
       run: melos version --yes
     - name: Changelog
       run: git diff master packages/conduit/CHANGELOG.md > CHANGES.txt
-    - name: Dry run
-      run: melos publish --dry-run --yes
+    - name: Cache Source
+      run: melos cache-source
     - name: Push tags
       uses: CasperWA/push-protected@v2
       with:

@@ -140,6 +140,7 @@ void main() {
           // ignore: missing_return
           (req) {
         set = true;
+        return null;
       });
 
       var response = await http.get(Uri.parse("http://localhost:4111"));

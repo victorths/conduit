@@ -3,10 +3,9 @@
 /// More dartdocs go here.
 import 'dart:io';
 
+import 'package:fs_test_agent/working_directory_agent.dart';
 import 'package:path/path.dart';
 import 'package:pubspec/pubspec.dart';
-
-import 'working_directory_agent.dart';
 
 /// A [WorkingDirectoryAgent] with additional behavior for managing a 'Dart package' directory.
 class DartProjectAgent extends WorkingDirectoryAgent {

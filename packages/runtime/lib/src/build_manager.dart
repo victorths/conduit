@@ -3,7 +3,6 @@ import 'dart:io';
 
 import 'package:analyzer/dart/analysis/results.dart';
 import 'package:analyzer/dart/ast/ast.dart';
-import 'package:package_config/package_config.dart';
 import 'package:conduit_isolate_exec/conduit_isolate_exec.dart';
 import 'package:conduit_runtime/runtime.dart';
 
@@ -42,11 +41,11 @@ class BuildManager {
     final analyzer = CodeAnalyzer(strippedScriptFile.absolute.uri);
     final analyzerContext = analyzer.contexts.contextFor(analyzer.path);
     final parsedUnit = analyzerContext.currentSession
-        .getParsedUnit2(analyzer.path) as ParsedUnitResult;
+        .getParsedUnit(analyzer.path) as ParsedUnitResult;
 
     final mainFunctions = parsedUnit.unit.declarations
         .whereType<FunctionDeclaration>()
-        .where((f) => f.name.name == "main")
+        .where((f) => f.name == "main")
         .toList();
 
     for (final f in mainFunctions.reversed) {

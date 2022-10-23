@@ -93,7 +93,6 @@ class AuthCodeController extends ResourceController {
   @Operation.get()
   Future<Response> getAuthorizationPage(
       {
-
       /// A space-delimited list of access scopes to be requested by the form submission on the returned page.
       @Bind.query("scope") String? scope}) async {
     if (delegate == null) {
@@ -116,7 +115,6 @@ class AuthCodeController extends ResourceController {
   @Operation.post()
   Future<Response> authorize(
       {
-
       /// The username of the authenticating user.
       @Bind.query("username") String? username,
 
