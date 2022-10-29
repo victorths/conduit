@@ -1,3 +1,7 @@
+## 3.2.6
+
+ - **DOCS**: Reworked contributions guide ([#126](https://github.com/conduit-dart/conduit/issues/126)). ([ce3847be](https://github.com/conduit-dart/conduit/commit/ce3847be9ef28b8be4f790f820cd085a8c910671))
+
 ## 3.2.5
 
  - **FIX**: Fix build binary command ([#121](https://github.com/conduit-dart/conduit/issues/121)). ([daba4b13](https://github.com/conduit-dart/conduit/commit/daba4b139558f429190acd530d76395bbe0e2405))
