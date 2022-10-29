@@ -3,10 +3,12 @@ Welcome to the project. All PRs are welcome, though I will be critical of PRs to
 
 ## Branching
 If you have a change you want to commit create a branch with the below naming conventions and topic names.
-`docs/<description>`
-`fix/<username>-<description>`
-`feature/<username>-<description>`
-`refactor/<username>-<description>`
+```
+docs/<description>
+fix/<username>-<description>
+feature/<username>-<description>
+refactor/<username>-<description>
+```
 If the scope of the issue changes for any reason, please rebranch and use the appropriate anming convention.
 
 ## Local Testing
