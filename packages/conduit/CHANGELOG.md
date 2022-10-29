@@ -1,3 +1,7 @@
+## 3.2.7
+
+ - **REFACTOR**: Analyzer changes and publishing ([#127](https://github.com/conduit-dart/conduit/issues/127)). ([034ceb59](https://github.com/conduit-dart/conduit/commit/034ceb59542250553ff26695d1f8f10b0f3fd31b))
+
 ## 3.2.6
 
  - **DOCS**: Reworked contributions guide ([#126](https://github.com/conduit-dart/conduit/issues/126)). ([ce3847be](https://github.com/conduit-dart/conduit/commit/ce3847be9ef28b8be4f790f820cd085a8c910671))
