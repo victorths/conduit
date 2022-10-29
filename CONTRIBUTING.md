@@ -1,5 +1,5 @@
 # Contributing
-Welcome to the project. All PRs are welcome, though I will be critical of PRs to the best of my ability. I want to find developers who can help check my work and also help foster newcomers so that they can help keep me accountable as well. Thank you for your support. If you have any questions, please reach out on the (discord server)[https://discord.gg/FyJj45NXPx]. If I don't respond on the server, feel free to reach out to me (frosty#1337).
+Welcome to the project. All PRs are welcome, though I will be critical of PRs to the best of my ability. I want to find developers who can help check my work and also help foster newcomers so that they can help keep me accountable as well. Thank you for your support. If you have any questions, please reach out on the [discord server](https://discord.gg/FyJj45NXPx). If I don't respond on the server, feel free to reach out to me (frosty#1337).
 
 ## Branching
 If you have a change you want to commit create a branch with the below naming conventions and topic names.
@@ -21,7 +21,7 @@ melos bootstrap
 melos cache-source
 . ./ci/.env
 ```
-Provide a database with the appropriate configurations. I highly recommend that you (install docker)[https://docs.docker.com/get-docker/] and use the provided docker compose file at [ci/docker-compose.yaml] which sets up a similar database used in the github CI.
+Provide a database with the appropriate configurations. I highly recommend that you [install docker](https://docs.docker.com/get-docker/) and use the provided docker compose file at (ci/docker-compose.yaml) which sets up a similar database used in the github CI.
 ### Running Tests
 Currently there are three tests that need to be run to hit all the tests:
 ```bash
