@@ -38,7 +38,7 @@ jobs:
     - name: Uptick versions
       run: melos version --yes
     - name: Changelog
-      run: git diff --unified=0 $GITHUB_SHA packages/conduit/CHANGELOG.md > CHANGES.txt
+      run: git diff --unified=0 $GITHUB_SHA packages/conduit/CHANGELOG.md | tail +6 | sed -e 's/^\+//' > CHANGES.txt
     - name: Cache Source
       run: melos cache-source
     - name: Push tags
