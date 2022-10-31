@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_catching_errors
+
 import 'dart:async';
 
 import 'package:conduit/conduit.dart';
@@ -13,6 +15,7 @@ void main() {
     } on StateError catch (e) {
       expect(
         e.toString(),
+        // ignore: missing_whitespace_between_adjacent_strings
         "Bad state: Invalid binding 'x' on 'ErrorDefaultBool.get1':"
         "Parameter type does not implement static parse method.",
       );
