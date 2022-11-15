@@ -1,3 +1,7 @@
+## 3.2.10
+
+ - **DOCS**: Sort out licensing and contributors ([#134](https://github.com/conduit-dart/conduit/issues/134)). ([1216ecf7](https://github.com/conduit-dart/conduit/commit/1216ecf7f83526004594634dddcf1df02d565a70))
+
 ## 3.2.9
 
  - **REFACTOR**: Apply standard lint analysis, refactor some nullables ([#129](https://github.com/conduit-dart/conduit/issues/129)). ([17f71bbb](https://github.com/conduit-dart/conduit/commit/17f71bbbe32cdb69947b6175f4ea46941be20410))
