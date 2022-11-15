@@ -3,7 +3,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-[![Test Suite](https://github.com/conduit-dart/conduit/actions/workflows/test.yml/badge.svg)](https://github.com/conduit-dart/conduit/actions/workflows/test.yml) [<img src="https://discord.com/assets/3437c10597c1526c3dbd98c737c2bcae.svg" width="28" height="20">](https://discord.gg/MHz5cqktHW)
+[<img src="https://discord.com/assets/3437c10597c1526c3dbd98c737c2bcae.svg" width="28" height="20">](https://discord.gg/MHz5cqktHW)
 
 Conduit is a fork of Stablekernel's Aqueduct, a modern Dart HTTP server framework.
 
