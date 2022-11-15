@@ -1,9 +1,9 @@
 <img src="https://raw.githubusercontent.com/conduit-dart/conduit/master/assets/conduit-name.svg" width="500" height="150">
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-[<img src="https://discord.com/assets/3437c10597c1526c3dbd98c737c2bcae.svg" width="28" height="20">](https://discord.gg/MHz5cqktHW)
+[![Linux](https://github.com/conduit-dart/conduit/actions/workflows/linux.yml/badge.svg)](https://github.com/conduit-dart/conduit/actions/workflows/linux.yml) [![Windows](https://github.com/conduit-dart/conduit/actions/workflows/windows.yml/badge.svg)](https://github.com/conduit-dart/conduit/actions/workflows/windows.yml) [![Macos](https://github.com/conduit-dart/conduit/actions/workflows/macos.yml/badge.svg)](https://github.com/conduit-dart/conduit/actions/workflows/macos.yml) [<img src="https://discord.com/assets/3437c10597c1526c3dbd98c737c2bcae.svg" width="28" height="20">](https://discord.gg/MHz5cqktHW)
 
 Conduit is a fork of Stablekernel's Aqueduct, a modern Dart HTTP server framework.
 
