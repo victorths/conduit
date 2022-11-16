@@ -1,3 +1,7 @@
+## 3.2.11
+
+ - **REFACTOR**: Uptick min dart version ([#139](https://github.com/conduit-dart/conduit/issues/139)). ([45723b81](https://github.com/conduit-dart/conduit/commit/45723b81f99259998dac08e1db3f5f8aa64f80dd))
+
 ## 3.2.10
 
  - **DOCS**: Sort out licensing and contributors ([#134](https://github.com/conduit-dart/conduit/issues/134)). ([1216ecf7](https://github.com/conduit-dart/conduit/commit/1216ecf7f83526004594634dddcf1df02d565a70))
