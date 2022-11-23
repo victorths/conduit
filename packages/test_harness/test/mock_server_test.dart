@@ -13,15 +13,15 @@ void main() {
     late MockHTTPServer server;
     late Agent testClient;
     late int rand;
-    setUp(() async {
+    setUp(() {
       rand = Random().nextInt(3000) + 1000;
       testClient = Agent.onPort(rand);
       server = MockHTTPServer(rand);
-      await server.open();
+      return server.open();
     });
 
-    tearDown(() async {
-      await server.close();
+    tearDown(() {
+      return server.close();
     });
 
     test("Request body is captured", () async {
