@@ -1,3 +1,7 @@
+## 3.2.11
+
+ - **FIX**: Handle private class in isolate ([#152](https://github.com/conduit-dart/conduit/issues/152)). ([28b87457](https://github.com/conduit-dart/conduit/commit/28b87457498242e353301ebbde00c858dd265482))
+
 ## 3.2.10
 
  - **REFACTOR**: Uptick min dart version ([#139](https://github.com/conduit-dart/conduit/issues/139)). ([45723b81](https://github.com/conduit-dart/conduit/commit/45723b81f99259998dac08e1db3f5f8aa64f80dd))
