@@ -1,3 +1,7 @@
+## 4.0.1
+
+ - **REFACTOR**: Limit ci runs and uptick lint package ([#160](https://github.com/conduit-dart/conduit/issues/160)). ([f8d1de60](https://github.com/conduit-dart/conduit/commit/f8d1de600bc66f02827789b5baed3c35abbd2d27))
+
 ## 4.0.0
 
 > Note: This release has breaking changes.
