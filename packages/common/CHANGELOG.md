@@ -1,3 +1,7 @@
+## 4.1.0
+
+ - **FEAT**: Separates core framework and cli ([#161](https://github.com/conduit-dart/conduit/issues/161)). ([28445bbe](https://github.com/conduit-dart/conduit/commit/28445bbe2c012a3a16d372f6ddf29d344939e72f))
+
 ## 4.0.1
 
  - **REFACTOR**: Limit ci runs and uptick lint package ([#160](https://github.com/conduit-dart/conduit/issues/160)). ([f8d1de60](https://github.com/conduit-dart/conduit/commit/f8d1de600bc66f02827789b5baed3c35abbd2d27))
