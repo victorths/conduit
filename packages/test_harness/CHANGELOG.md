@@ -1,3 +1,7 @@
+## 4.1.5
+
+ - **FIX**: core docs. ([1470ee70](https://github.com/conduit-dart/conduit/commit/1470ee70940fe6c4bbd4ba6d498eaed826297f51))
+
 ## 4.1.4
 
  - **FIX**: pip requirements. ([be112ba3](https://github.com/conduit-dart/conduit/commit/be112ba30a5722b96a0751921f379167cf67f91b))
