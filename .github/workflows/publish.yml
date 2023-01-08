@@ -55,7 +55,7 @@ jobs:
         tag_name: ${{ env.release_tag }}
         body_path: CHANGES.txt
     - name: Generate docs
-      run: melos gen-docs && echo "mkdocs-monorepo-plugin=1.0.4" > requirements.txt
+      run: melos bootstrap && melos gen-docs && echo "mkdocs-monorepo-plugin=1.0.4" > requirements.txt
     - name: Deploy docs
       uses: mhausenblas/mkdocs-deploy-gh-pages@master
       env:
