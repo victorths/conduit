@@ -1,3 +1,7 @@
+## 4.1.1
+
+ - **FIX**: Check cli integrity ([#164](https://github.com/conduit-dart/conduit/issues/164)). ([5fd4e403](https://github.com/conduit-dart/conduit/commit/5fd4e4036d7316c91c2bfac3a06a2526096a9fac))
+
 ## 4.1.0
 
  - **FEAT**: Separates core framework and cli ([#161](https://github.com/conduit-dart/conduit/issues/161)). ([28445bbe](https://github.com/conduit-dart/conduit/commit/28445bbe2c012a3a16d372f6ddf29d344939e72f))
