@@ -1,3 +1,7 @@
+## 4.1.4
+
+ - **FIX**: pip requirements. ([be112ba3](https://github.com/conduit-dart/conduit/commit/be112ba30a5722b96a0751921f379167cf67f91b))
+
 ## 4.1.3
 
  - **FIX**: doc generation. ([973ed978](https://github.com/conduit-dart/conduit/commit/973ed978b92b323a2f2e500059c854f84bf9e15e))
