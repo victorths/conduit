@@ -1,3 +1,7 @@
+## 4.1.3
+
+ - **FIX**: doc generation. ([973ed978](https://github.com/conduit-dart/conduit/commit/973ed978b92b323a2f2e500059c854f84bf9e15e))
+
 ## 4.1.2
 
  - **FIX**: run docs. ([f2955727](https://github.com/conduit-dart/conduit/commit/f29557273de7d27fd0dc1bcf366157f0a602b345))
