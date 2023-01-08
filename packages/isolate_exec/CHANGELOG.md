@@ -1,3 +1,7 @@
+## 4.1.2
+
+ - **FIX**: run docs. ([f2955727](https://github.com/conduit-dart/conduit/commit/f29557273de7d27fd0dc1bcf366157f0a602b345))
+
 ## 4.1.1
 
  - **FIX**: Check cli integrity ([#164](https://github.com/conduit-dart/conduit/issues/164)). ([5fd4e403](https://github.com/conduit-dart/conduit/commit/5fd4e4036d7316c91c2bfac3a06a2526096a9fac))
