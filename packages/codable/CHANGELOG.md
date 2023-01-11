@@ -1,3 +1,7 @@
+## 4.1.6
+
+ - **FIX**: investigate build issues ([#167](https://github.com/conduit-dart/conduit/issues/167)). ([ee79f9e6](https://github.com/conduit-dart/conduit/commit/ee79f9e69a4f6dbaefa93db78505eaf7b5a88652))
+
 ## 4.1.5
 
  - **FIX**: core docs. ([1470ee70](https://github.com/conduit-dart/conduit/commit/1470ee70940fe6c4bbd4ba6d498eaed826297f51))
