@@ -4,4 +4,6 @@ COPY packages/ packages/
 COPY melos.yaml melos.yaml
 RUN dart pub global activate -spath packages/cli
 RUN dart pub global activate melos
-RUN dart pub global run melos:melos cache-source
+ENV PUB_CACHE=/root/.pub-cache
+ENV PATH=$PATH:$PUB_CACHE/bin
+RUN melos cache-source
