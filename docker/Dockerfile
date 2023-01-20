@@ -1,4 +1,4 @@
-FROM dart:stable
+FROM dart:dev
 
 COPY packages/ packages/
 COPY melos.yaml melos.yaml
@@ -7,3 +7,4 @@ RUN dart pub global activate melos
 ENV PUB_CACHE=/root/.pub-cache
 ENV PATH=$PATH:$PUB_CACHE/bin
 RUN melos cache-source
+RUN dart --disable-analytics
