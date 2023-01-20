@@ -1,4 +1,4 @@
-FROM dart:dev
+FROM dart:stable
 
 COPY packages/ packages/
 COPY melos.yaml melos.yaml
