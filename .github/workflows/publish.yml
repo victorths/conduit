@@ -68,8 +68,8 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
       with:
-        platforms: linux/amd64,linux/arm64,linux/arm/v8
+        platforms: linux/amd64,linux/arm64/v8,linux/arm/v7
     - name: Login
       run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PAT }}
     - name: Build and Push
-      run: docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v8 --file docker/Dockerfile --tag conduitdart/conduit:${{ env.release_tag }} --push .
+      run: docker buildx build --platform linux/amd64,linux/arm64/v8,linux/arm/v7 --file docker/Dockerfile --tag conduitdart/conduit:${{ env.release_tag }} --push .
