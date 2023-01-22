@@ -1,5 +1,4 @@
 site_name: Conduit
-site_url: https://docs.conduit.dev/
 theme:
   name: readthedocs
   custom_dir: docs/overrides
