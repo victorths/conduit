@@ -4,6 +4,7 @@ on:
   pull_request:
     branches:
     - master
+    types: [closed]
   workflow_dispatch:
     branches:
     - master
@@ -16,8 +17,7 @@ jobs:
   docs:
     if: |
       github.event_name == 'workflow_dispatch' 
-      || (github.event_name == 'pull_request' && startsWith(github.head_ref, 'docs/') 
-          && github.event.action == 'closed' && github.event.pull_request.merged == true)
+      || (github.event.pull_request.merged && startsWith(github.ref_name, 'docs/'))
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
