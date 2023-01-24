@@ -69,8 +69,8 @@ class CLITemplateCreator extends CLICommand with CLIConduitGlobal {
 
     createProjectSpecificFiles(destDirectory.path);
     try {
-      final conduitLocation = conduitPackageRef!.resolve()!.location;
       if (conduitPackageRef?.sourceType == "path") {
+        final conduitLocation = conduitPackageRef!.resolve()!.location;
         if (!addDependencyOverridesToPackage(destDirectory.path, {
           "conduit_codable": _packageUri(conduitLocation, 'codable'),
           "conduit_common": _packageUri(conduitLocation, 'common'),
@@ -423,9 +423,13 @@ class CLIConduitGlobal {
     if (apps.isEmpty) {
       return null;
     }
-    return apps
-        .firstWhere((app) => app.name == "conduit")
-        .getDefiningPackageRef();
+    try {
+      return apps
+          .firstWhere((app) => app.name == "conduit")
+          .getDefiningPackageRef();
+    } catch (_) {
+      return null;
+    }
   }
 
   Uri? get templateDirectory {
