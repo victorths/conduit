@@ -1,3 +1,7 @@
+## 4.1.8
+
+ - **FIX**: catch no templates scenario ([#181](https://github.com/conduit-dart/conduit/issues/181)). ([eaeecc4d](https://github.com/conduit-dart/conduit/commit/eaeecc4df649ef6fcd90451e8c80cadbb11af7e8))
+
 ## 4.1.7
 
  - **FIX**: Cache cli ([#169](https://github.com/conduit-dart/conduit/issues/169)). ([959e80b5](https://github.com/conduit-dart/conduit/commit/959e80b5086a9c127d3a38331383a4a5a57d29da))
