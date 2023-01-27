@@ -12,23 +12,15 @@ nav:
   - Getting Started: 'getting_started.md'
   - Core Concepts: 'core_concepts.md'
   - Tour: 'tour.md'
-  - API: '*include ./packages/*/mkdocs.yml'
-  - Best Practices: 'best_practices.md'
   - Tutorial:
     - '1. Getting Started': 'tut/getting-started.md'
     - '2. Reading from a Database': 'tut/executing-queries.md'
     - '3. Storing Data in a Database': 'tut/storing-data.md'
     - '4. Configuration and Testing': 'tut/writing-tests.md'
     - '5. Authentication and Authorization': 'tut/oauth2.md'
-  - Migration:
-    - 'migration/4.1.8.md'
-  - Snippets:
-    - 'Overview': 'snippets/README.md'
-    - 'HTTP': 'snippets/http.md'
-    - 'ORM': 'snippets/orm.md'
-    - 'Authentication and Authorization': 'snippets/auth.md'
-    - 'Testing': 'snippets/test.md'
-  - Guide:
+  - API: '*include ./packages/*/mkdocs.yml'
+  - Best Practices: 'best_practices.md'
+  - Guides:
     - 'Application Configuration and Behavior':
         - 'Overview': 'application/README.md'
         - 'Starting and Stopping Applications': 'application/channel.md'
@@ -89,5 +81,13 @@ nav:
         - 'Deploy on Heroku (VM)': 'deploy/deploy_heroku.md'
         - 'Deploy on AWS (VM)': 'deploy/deploy_aws.md'
         - 'Deploying without aqueduct serve (VM)': 'deploy/script.md'
+    - Migration:
+        - 'migration/4.1.8.md'
+  - Snippets:
+    - 'Overview': 'snippets/README.md'
+    - 'HTTP': 'snippets/http.md'
+    - 'ORM': 'snippets/orm.md'
+    - 'Authentication and Authorization': 'snippets/auth.md'
+    - 'Testing': 'snippets/test.md'
 plugins:
   - monorepo
