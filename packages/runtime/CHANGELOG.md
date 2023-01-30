@@ -1,3 +1,7 @@
+## 4.2.0
+
+ - **FEAT**: Replace ServiceRegistry with Finalizers ([#185](https://github.com/conduit-dart/conduit/issues/185)). ([73208e92](https://github.com/conduit-dart/conduit/commit/73208e92ceed79369405933b20d98c9ed48ed0e5))
+
 ## 4.1.8
 
  - **FIX**: catch no templates scenario ([#181](https://github.com/conduit-dart/conduit/issues/181)). ([eaeecc4d](https://github.com/conduit-dart/conduit/commit/eaeecc4df649ef6fcd90451e8c80cadbb11af7e8))
