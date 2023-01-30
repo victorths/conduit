@@ -2,8 +2,8 @@
 
 import 'dart:convert';
 
+import 'package:conduit_common_test/conduit_common_test.dart';
 import 'package:conduit_core/conduit_core.dart';
-import 'package:conduit_core/src/dev/helpers.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -785,7 +785,7 @@ void main() {
 
   test("Can have constructor with only optional args", () {
     final dm = ManagedDataModel([DefaultConstructorHasOptionalArgs]);
-    final _ = ManagedContext(dm, EmptyStore());
+    final _ = ManagedContext(dm, DefaultPersistentStore());
     final instance =
         dm.entityForType(DefaultConstructorHasOptionalArgs).instanceOf();
     expect(instance is DefaultConstructorHasOptionalArgs, true);
