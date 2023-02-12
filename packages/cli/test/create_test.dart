@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_dynamic_calls
-
 import 'dart:convert';
 import 'dart:io';
 
@@ -11,7 +9,7 @@ import 'package:pub_semver/pub_semver.dart';
 import 'package:test/test.dart';
 import 'package:yaml/yaml.dart';
 
-import '../not_tests/cli_helpers.dart';
+import 'not_tests/cli_helpers.dart';
 
 void main() {
   late CLIClient cli;
@@ -115,7 +113,7 @@ void main() {
     test("Template gets generated from local path, project points to it",
         () async {
       final res = await cli.run("create", ["test_project", "--offline"]);
-      expect(res, 0);
+      expect(res, isZero);
 
       final List packages = jsonDecode(
         File(
