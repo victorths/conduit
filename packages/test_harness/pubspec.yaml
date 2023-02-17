@@ -1,5 +1,5 @@
 name: conduit_test
-version: 4.3.2
+version: 4.3.3
 homepage: https://github.com/conduit-dart/conduit
 description: Utilities for writing automated tests for Conduit applications
 environment:
