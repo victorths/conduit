@@ -9,8 +9,7 @@ dependencies:
   collection: ^1.17.1
   conduit_common:
     path: ../common
-  conduit_core:
-    path: ../core
+  conduit_core: ^4.0.0
   conduit_postgresql:
     path: ../postgresql
 dev_dependencies:
