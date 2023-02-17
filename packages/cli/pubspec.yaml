@@ -14,6 +14,7 @@ dependencies:
   conduit_isolate_exec: ^4.3.5
   conduit_open_api: ^4.3.5
   conduit_password_hash: ^4.3.5
+  conduit_postgresql: ^4.3.5
   conduit_runtime: ^4.3.5
   crypto: ^3.0.2
   io: ^1.0.3
