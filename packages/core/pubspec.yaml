@@ -25,8 +25,7 @@ dependencies:
   recase: ^4.1.0
   yaml: ^3.1.0
 dev_dependencies:
-  conduit_common_test:
-    path: ../common_test
+  conduit_common_test: ^4.3.5
   conduit_test:
     path: ../test_harness
   fs_test_agent:
