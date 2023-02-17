@@ -1,3 +1,7 @@
+## 4.3.6
+
+ - **FIX**: trigger. ([00cc11e6](https://github.com/conduit-dart/conduit/commit/00cc11e6ac20f7c9274e3296294f64db62104e62))
+
 ## 4.3.5
 
  - **FIX**: test publish CI. ([7444f6ed](https://github.com/conduit-dart/conduit/commit/7444f6ed7042bfab50ce6bc285fa16530c69d34d))
