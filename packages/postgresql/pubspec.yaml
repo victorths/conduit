@@ -12,7 +12,6 @@ dependencies:
   postgres: ^2.5.2
 
 dev_dependencies:
-  conduit_common_test:
-    path: ../common_test
+  conduit_common_test: ^4.3.5
   lints: ^2.0.1
   test: ^1.21.6
