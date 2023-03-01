@@ -7,6 +7,7 @@ import 'dart:mirrors';
 
 import 'package:args/args.dart' as args;
 import 'package:collection/collection.dart' show IterableExtension;
+import 'package:conduit/src/commands/pub.dart';
 import 'package:conduit/src/metadata.dart';
 import 'package:conduit/src/running_process.dart';
 import 'package:conduit_runtime/runtime.dart';
@@ -109,7 +110,13 @@ abstract class CLICommand {
     }
   }
 
-  Version? get toolVersion => _toolVersion;
+  Future<Version> get toolVersion async {
+    if (_toolVersion == null) {
+      await determineToolVersion();
+    }
+    return _toolVersion!;
+  }
+
   Version? _toolVersion;
 
   static const _delimiter = "-- ";
@@ -214,18 +221,16 @@ abstract class CLICommand {
     try {
       _argumentValues = results;
 
-      await determineToolVersion();
-
       if (showVersion) {
-        outputSink.writeln("Conduit CLI version: $toolVersion");
+        outputSink.writeln("Conduit CLI version: ${await toolVersion}");
         return 0;
       }
 
       if (!isMachineOutput) {
-        displayInfo("Conduit CLI Version: $toolVersion");
+        displayInfo("Conduit CLI Version: ${await toolVersion}");
       }
 
-      preProcess();
+      await preProcess();
 
       if (helpMeItsScary) {
         printHelp(parentCommandName: parentCommandNames.join(" "));
@@ -252,28 +257,14 @@ abstract class CLICommand {
 
   Future determineToolVersion() async {
     try {
-      final toolLibraryFilePath = (await Isolate.resolvePackageUri(
-        currentMirrorSystem().findLibrary(#conduit).uri,
-      ))!
-          .toFilePath(windows: Platform.isWindows);
-      final conduitDirectory = Directory(
-        FileSystemEntity.parentOf(
-          FileSystemEntity.parentOf(toolLibraryFilePath),
-        ),
-      );
-      final toolPubspecFile =
-          File.fromUri(conduitDirectory.absolute.uri.resolve("pubspec.yaml"));
-
-      final toolPubspecContents =
-          loadYaml(toolPubspecFile.readAsStringSync()) as Map;
-      final toolVersion = toolPubspecContents["version"] as String;
-      _toolVersion = Version.parse(toolVersion);
+      final toolVersion = await findGlobalVersion();
+      _toolVersion = Version.parse(toolVersion!);
     } catch (e) {
       print(e);
     }
   }
 
-  void preProcess() {}
+  Future preProcess() async {}
 
   void displayError(
     String? errorMessage, {
