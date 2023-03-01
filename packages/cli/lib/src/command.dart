@@ -2,7 +2,6 @@
 
 import 'dart:async';
 import 'dart:io';
-import 'dart:isolate';
 import 'dart:mirrors';
 
 import 'package:args/args.dart' as args;
@@ -12,7 +11,6 @@ import 'package:conduit/src/metadata.dart';
 import 'package:conduit/src/running_process.dart';
 import 'package:conduit_runtime/runtime.dart';
 import 'package:pub_semver/pub_semver.dart';
-import 'package:yaml/yaml.dart';
 
 /// Exceptions thrown by command line interfaces.
 class CLIException implements Exception {

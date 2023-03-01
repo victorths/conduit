@@ -1,3 +1,8 @@
+## 4.3.8
+
+ - **REFACTOR**: Remove pub_cache ([#188](https://github.com/conduit-dart/conduit/issues/188)). ([6d5beca1](https://github.com/conduit-dart/conduit/commit/6d5beca119fceaa7938402f171fc8983678c40b3))
+ - **REFACTOR**: Remove pub_cache. ([18837180](https://github.com/conduit-dart/conduit/commit/18837180b5f68ad6559ff6e005dcf1be3aa6a0c9))
+
 ## 4.3.7
 
  - Fix template path
