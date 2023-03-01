@@ -1,3 +1,7 @@
+## 4.3.8
+
+ - **REFACTOR**: Remove common test. ([cebcc417](https://github.com/conduit-dart/conduit/commit/cebcc417fc2849f18b7e9a2a1bbab412eda621ff))
+
 ## 4.3.7
 
  - Manual Release
