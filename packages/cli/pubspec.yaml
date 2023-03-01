@@ -10,7 +10,7 @@ dependencies:
   collection: ^1.15.0
   conduit_common: ^4.3.6
   conduit_config: ^4.3.6
-  conduit_core: ^4.3.6
+  conduit_core: ^4.3.7
   conduit_isolate_exec: ^4.3.6
   conduit_open_api: ^4.3.6
   conduit_password_hash: ^4.3.6
